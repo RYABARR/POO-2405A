@@ -1,11 +1,17 @@
 fun main() {
-   var dinossauro =animal("reptil",'M',"Rio tiete",
+   /*var dinossauro =animal("reptil",'M',"Rio tiete",
                             "carnivoro", 397, true)
      
-   //print("meu bichinho e um " + dinossauro.dieta + " e ele mora no " + dinossauro.habitat)
-   dinoussauro.Atacar(true)
+   //print("meu bichinho e um " + dinossauro.dieta + " e ele mora no rio tiete
+    inossauro.Atacar(true)
+   
+   dinossauro.Ataque(true)
+   */
+   val contacorrente = contaNoBanco(4002, 8922, "safra,
+                                             "franco francesco aguero")
+   contaCorrente.consultarsaldo()
 }
-class pessoa(val nome : String, 
+/*class pessoa(val nome : String, 
              val altura :  Double,
              val cordosolhos: String, 
              val peso: Double){}
@@ -27,11 +33,31 @@ class pessoa(val nome : String,
                 println("Animal de boa, suavao")
             }
         }
-            
-            
-    fun (raivoso: Boolean){
-            if(raivoso == true){
-                println("Animal atacando")
+        //exercicio:faça um novo comportamento para o seu animal usando uma nova fun 
+        //pra quem ja fez,faça mas um:
+        
+        fun Ataque(manso: Boolean){
+            if(manso == true){
+                println("Animal brincando")
+            }else{
+                println("Animal de boa, tranquilão")
             }
+}
+    
     }
+    fun cuspirfogo(alergico: Boolean){
+       if(alergico){
+           println("cuspindo fogo")
+       }else{
+           println("cuspindo agua")
+    //metodos - comportamentos da mossa classe,que os nossos receberão 
+    //eles são declarados usando funções
+   */          
+    class ContaNoBanco(var senha : int, var saldo: Double,
+                      var Banco: String, var dono:String,
+                      ){
+     
+        fun consultarsaldo(){
+            println("")
+        }
     }
