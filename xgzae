@@ -1,63 +1,35 @@
 fun main() {
-   /*var dinossauro =animal("reptil",'M',"Rio tiete",
-                            "carnivoro", 397, true)
-     
-   //print("meu bichinho e um " + dinossauro.dieta + " e ele mora no rio tiete
-    inossauro.Atacar(true)
-   
-   dinossauro.Ataque(true)
-   */
-   val contacorrente = contaNoBanco(4002, 8922, "safra,
+    
+   val contaCorrente = contaNoBanco(4002, 8922.00, "safra",
                                              "franco francesco aguero")
    contaCorrente.consultarsaldo()
+   contaCorrente.saque(1000.00)
+   contaCorrente.deposito(00.01)
 }
-/*class pessoa(val nome : String, 
-             val altura :  Double,
-             val cordosolhos: String, 
-             val peso: Double){}
-    //declarando atributos para a classe
-    /*
-    var nome =""
-    var altura = 0.0 
-    var cordosolhos =""
-    var peso =0.0
-    */
-    class animal(val especie: String,val genero: Char, val habitat: String,
-                val dieta:String, val idade:Int, val voa: Boolean){
-     
-      
-        fun Atacar(bravo: Boolean){
-            if(bravo == true){
-                println("Animal atacando")
-            }else{
-                println("Animal de boa, suavao")
-            }
-        }
-        //exercicio:faça um novo comportamento para o seu animal usando uma nova fun 
-        //pra quem ja fez,faça mas um:
-        
-        fun Ataque(manso: Boolean){
-            if(manso == true){
-                println("Animal brincando")
-            }else{
-                println("Animal de boa, tranquilão")
-            }
-}
-    
-    }
-    fun cuspirfogo(alergico: Boolean){
-       if(alergico){
-           println("cuspindo fogo")
-       }else{
-           println("cuspindo agua")
-    //metodos - comportamentos da mossa classe,que os nossos receberão 
-    //eles são declarados usando funções
-   */          
-    class ContaNoBanco(var senha : int, var saldo: Double,
+    class contaNoBanco(var senha : Int, var saldo: Double,
                       var Banco: String, var dono:String,
                       ){
      
         fun consultarsaldo(){
-            println("")
+            println("o saldo da sua conta é R$$saldo")
         }
+     
+     fun saque(valorSaque:Double){
+         if(valorSaque<= 0){
+             println("Impossivel sacar R$$valorSaque")
+         }else if(saldo >=valorSaque){
+             println("Saque de R$$valorSaque realizado com sucesso")
+         }else{
+             println("saldo insulficiente,Sque de R$$valorSaque não realizado")
+         }  
+     }
+    //Exercicio -- faça um novo método para que passamos depositar dinheiro na conta
+     fun deposito(valorDeposito: Double){
+       if(valorDeposito<= 0){
+           println("Depositar de R$$valorDeposito impossivel de ser realizado")
+       }else{
+        saldo += valorDeposito
+       println ("depósito de R$$valorDeposito realizado com sucesso")
+    }
+     }
     }
